@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearson Edexcel IGCSE Biology: Mitosis Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f6f9; color: #333; margin: 0; padding: 20px; }
+        .quiz-container { max-width: 800px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #1a5276; text-align: center; margin-bottom: 10px; }
+        .subtitle { text-align: center; font-weight: bold; color: #555; margin-bottom: 25px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 30px; border-radius: 8px; }
+        .video-container iframe { position: absolute; top:0; left: 0; width: 100%; height: 100%; border: 0; }
+        .question-card { border: 1px solid #e0e0e0; background: #fafafa; border-radius: 8px; padding: 20px; margin-bottom: 25px; }
+        .question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .question-title { font-weight: bold; font-size: 1.1em; color: #2c3e50; }
+        .marks { background: #27ae60; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; }
+        .required-asterisk { color: #e74c3c; font-weight: bold; }
+        .q-img { max-width: 100%; height: auto; display: block; margin: 15px 0; border-radius: 6px; border: 1px solid #ddd; }
+        .options-group { margin-top: 10px; }
+        .option-label { display: block; background: #fff; padding: 10px 14px; margin-bottom: 8px; border: 1px solid #dcdcdc; border-radius: 6px; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+        .option-label:hover { background: #ebf5fb; }
+        .option-label input { margin-right: 10px; }
+        .explanation-box { display: none; margin-top: 15px; padding: 12px; background: #eaf2f8; border-left: 4px solid #2980b9; border-radius: 4px; font-size: 0.95em; }
+        .explanation-title { font-weight: bold; color: #1b4f72; margin-bottom: 4px; }
+        .submit-btn { display: block; width: 100%; padding: 14px; background: #2980b9; color: white; border: none; border-radius: 6px; font-size: 1.1em; cursor: pointer; font-weight: bold; margin-top: 20px; }
+        .submit-btn:hover { background: #1a5276; }
+        
+        /* Feedback styles */
+        .option-label.correct { background-color: #d4edda !important; border-color: #28a745 !important; color: #155724; font-weight: bold; }
+        .option-label.incorrect { background-color: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+        .score-box { display: none; background: #d4edda; color: #155724; border: 1px solid #c3e6cb; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.3em; font-weight: bold; margin-bottom: 25px; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Edexcel IGCSE Biology: Mitosis</h1>
+    <p class="subtitle">Specification Topic: Cell Division and Mitosis | Total Marks: 15</p>
+
+    <!-- Introductory YouTube Video -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/f-ldPgEfAHI" title="Mitosis Video Introduction" allowfullscreen></iframe>
+    </div>
+
+    <div id="scoreBox" class="score-box"></div>
+
+    <form id="mitosisQuiz">
+
+        <!-- Question 1 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">1. What is the primary purpose of mitosis in multicellular organisms? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q1" value="A" required> A) Production of gametes for sexual reproduction</label>
+                <label class="option-label"><input type="radio" name="q1" value="B" required> B) Growth, tissue repair, and asexual reproduction</label>
+                <label class="option-label"><input type="radio" name="q1" value="C" required> C) Halving the chromosome number for fertilization</label>
+                <label class="option-label"><input type="radio" name="q1" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> Mitosis produces genetically identical diploid cells essential for growth, replacing damaged tissues, and asexual reproduction. Gamete production and chromosome halving occur during meiosis.
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-card" data-answer="A">
+            <div class="question-header">
+                <span class="question-title">2. How many daughter cells are produced at the end of mitosis, and what is their genetic nature? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q2" value="A" required> A) Two genetically identical daughter cells</label>
+                <label class="option-label"><input type="radio" name="q2" value="B" required> B) Four genetically non-identical daughter cells</label>
+                <label class="option-label"><input type="radio" name="q2" value="C" required> C) Two haploid daughter cells with different DNA</label>
+                <label class="option-label"><input type="radio" name="q2" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: A.</strong> A single parent cell undergoes one nuclear division to produce two daughter cells that are genetic clones of each other and the original cell.
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">3. Which phase of the cell cycle precedes mitosis, during which DNA replication occurs? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRNbIImenWq500c7fSSxNXMzb3ybwACnsNTUz8XHaXuRuLB2BXE0wT1YlLVlV-NON0T1WbtnbbdY_qh22c" class="q-img" alt="Cell Cycle Diagram">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q3" value="A" required> A) Metaphase</label>
+                <label class="option-label"><input type="radio" name="q3" value="B" required> B) Interphase</label>
+                <label class="option-label"><input type="radio" name="q3" value="C" required> C) Cytokinesis</label>
+                <label class="option-label"><input type="radio" name="q3" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> Before mitosis begins, the cell is in interphase. During this period, the cell grows, performs normal cellular functions, and replicates its DNA so each chromosome consists of two identical chromatids.
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">4. If a human somatic cell with 46 chromosomes divides by mitosis, how many chromosomes will each daughter cell contain? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcS_yL5TxculT3tCK0ElFs71uvxtnXi4mDHUa9GjRfT6LoSo9AC5Y5MXjeoaU7hKxoJWbXRlFcMhFTgPVoY" class="q-img" alt="Diploid vs Haploid Chromosome Sets">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q4" value="A" required> A) 23 chromosomes</label>
+                <label class="option-label"><input type="radio" name="q4" value="B" required> B) 46 chromosomes</label>
+                <label class="option-label"><input type="radio" name="q4" value="C" required> C) 92 chromosomes</label>
+                <label class="option-label"><input type="radio" name="q4" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> Mitosis maintains the diploid chromosome number (2n). In humans, diploid body cells have 46 chromosomes (23 pairs), and both daughter cells inherit this exact full set.
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">5. What structure holds two identical sister chromatids together before they separate in mitosis? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQK9gR3mFsVZWhEbgzKcqpn8_zHOMRzXNe1uCOgjVuHAryrFocZTXDiNEdHH1IL0N2Ds2iJtyaX6ry3awI" class="q-img" alt="Detailed Chromosome Structure">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q5" value="A" required> A) Centriole</label>
+                <label class="option-label"><input type="radio" name="q5" value="B" required> B) Centromere</label>
+                <label class="option-label"><input type="radio" name="q5" value="C" required> C) Spindle fiber</label>
+                <label class="option-label"><input type="radio" name="q5" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> The centromere is the central region of a duplicated chromosome where two sister chromatids remain attached until pulled apart during anaphase.
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-card" data-answer="A">
+            <div class="question-header">
+                <span class="question-title">6. During which stage of mitosis do chromosomes condense and the nuclear envelope break down? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRxfO81QXS8w8wjl1nGYmx0JfiqZe_cyYhgNqSUJSDwpIHG5uAWEJ3u1JfzaB-NnRMH2DjpXx-RGqLTxfA" class="q-img" alt="Prophase Diagram">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q6" value="A" required> A) Prophase</label>
+                <label class="option-label"><input type="radio" name="q6" value="B" required> B) Metaphase</label>
+                <label class="option-label"><input type="radio" name="q6" value="C" required> C) Telophase</label>
+                <label class="option-label"><input type="radio" name="q6" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: A.</strong> Prophase is the first stage of mitosis. Chromosomes condense (become short, thick, and visible), spindle fibers begin forming, and the nuclear membrane breaks down.
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">7. What key event occurs during Metaphase? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRqAOW6hNS_j2zQIHdFDKT-JjJiGgBZ3bu-B0hfqlMJJSWRtq3zF66TV3KqmDh4Go2aXUyD7u2OC4kchAs" class="q-img" alt="Metaphase Diagram">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q7" value="A" required> A) Sister chromatids are pulled to opposite poles of the cell</label>
+                <label class="option-label"><input type="radio" name="q7" value="B" required> B) Chromosomes line up single file along the equator of the cell</label>
+                <label class="option-label"><input type="radio" name="q7" value="C" required> C) Two new nuclear membranes reform around the DNA</label>
+                <label class="option-label"><input type="radio" name="q7" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> During Metaphase ("M" for Middle), spindle fibers attach to centromeres and align chromosomes along the central equator of the cell.
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">8. What happens to the sister chromatids during Anaphase? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRnJFxSdaMVRGMc4o_u3B9OCrxYJmgWfRntntwevy5mWvBOiaVsmZYR1Lk1SkUCMNddM-xf2S88CicAIWo" class="q-img" alt="Anaphase Diagram">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q8" value="A" required> A) They replicate to double the amount of DNA</label>
+                <label class="option-label"><input type="radio" name="q8" value="B" required> B) Spindle fibers shorten, pulling sister chromatids apart to opposite poles</label>
+                <label class="option-label"><input type="radio" name="q8" value="C" required> C) They uncoil and disappear back into chromatin</label>
+                <label class="option-label"><input type="radio" name="q8" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> In Anaphase ("A" for Away/Apart), spindle fibers shorten and pull the centromeres apart, separating sister chromatids to opposite ends (poles) of the cell.
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">9. What is the process of physical cytoplasm division following telophase called? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQa_KudFLAeV9xvP6ManHmEqjD-b2HQaKD_MuBIWaHNLKQgUcm6wxu_o6lEV8zJegu8wD-aLpVWKRlVzQQ" class="q-img" alt="Telophase and Cytokinesis Diagram">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q9" value="A" required> A) Binary fission</label>
+                <label class="option-label"><input type="radio" name="q9" value="B" required> B) Cytokinesis</label>
+                <label class="option-label"><input type="radio" name="q9" value="C" required> C) Synthesis phase</label>
+                <label class="option-label"><input type="radio" name="q9" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> Cytokinesis is the final step of cell division where the cell membrane and cytoplasm split, dividing the parent cell into two separate daughter cells.
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-card" data-answer="A">
+            <div class="question-header">
+                <span class="question-title">10. How does cytokinesis differ between plant cells and animal cells? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTwj5-1iJ5iN4FgbroxtqIX6BN2knmzNArYi-TfsdFehAp9WoIR6VxYfL8FYln7j2jl8eRHay-nQAMgK8w" class="q-img" alt="Plant Cell Division Diagram">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q10" value="A" required> A) Plant cells form a cell plate to build a new cell wall, while animal cells pinch inward</label>
+                <label class="option-label"><input type="radio" name="q10" value="B" required> B) Animal cells form a cellulose wall, whereas plant cells split by constriction</label>
+                <label class="option-label"><input type="radio" name="q10" value="C" required> C) Plant cells undergo cytokinesis during interphase instead of after telophase</label>
+                <label class="option-label"><input type="radio" name="q10" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: A.</strong> Because plant cells possess a rigid cell wall, they form a cell plate down the center that turns into a new cell wall. Animal cells lack cell walls and simply pinch inward (cleavage furrow).
+            </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">11. Uncontrolled, rapid cell division by mitosis can lead to the formation of what condition? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQ40hUH29yPjxuOnU7bhMv_xzaOm23AVo2jULm-cdbk8DSs5p3sSDBqvoWZXAbNshRFmybdNcF2-sgro40" class="q-img" alt="Cancer Cell Growth Diagram">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q11" value="A" required> A) Genetic variation</label>
+                <label class="option-label"><input type="radio" name="q11" value="B" required> B) Tumours and cancer</label>
+                <label class="option-label"><input type="radio" name="q11" value="C" required> C) Polyploidy</label>
+                <label class="option-label"><input type="radio" name="q11" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> Cancer is caused by mutations in genes that control the cell cycle, leading to unchecked and continuous mitotic cell division, which forms a mass of cells called a tumour.
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">12. What term describes unspecialized cells capable of dividing by mitosis to differentiate into various cell types? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQvrf3ClXaOTdOULzfhqpqIiLtUpI3eME3IeXnMGdMhJ11QpMQLmXpU4FdBXqn5hxA9nAvF51oxo5tMQEc" class="q-img" alt="Stem Cell Diagram">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q12" value="A" required> A) Gametes</label>
+                <label class="option-label"><input type="radio" name="q12" value="B" required> B) Stem cells</label>
+                <label class="option-label"><input type="radio" name="q12" value="C" required> C) Zygotes</label>
+                <label class="option-label"><input type="radio" name="q12" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> Stem cells are undifferentiated cells that divide repeatedly by mitosis. They can develop into specialized functional cells (e.g., nerve, blood, muscle cells).
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">13. Which of the following statements about mitosis is correct? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q13" value="A" required> A) It introduces crossing over and independent assortment</label>
+                <label class="option-label"><input type="radio" name="q13" value="B" required> B) It produces genetically identical cells with no genetic variation</label>
+                <label class="option-label"><input type="radio" name="q13" value="C" required> C) It reduces the chromosome set from diploid (2n) to haploid (n)</label>
+                <label class="option-label"><input type="radio" name="q13" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> Mitosis produces exact genetic copies (clones). Crossing over, independent assortment, and chromosome reduction are features exclusive to meiosis.
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">14. What is the correct chronological sequence of the phases of mitosis? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSlM6n7HkK4NePZemMkaaEusvL9dD2bILBSjEVuEvX_iY4yPqnsgWsHKhbBXWr9qXt3pele2WvSTEY9gdw" class="q-img" alt="Mitosis Stages Overview">
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q14" value="A" required> A) Anaphase &rarr; Metaphase &rarr; Prophase &rarr; Telophase</label>
+                <label class="option-label"><input type="radio" name="q14" value="B" required> B) Prophase &rarr; Metaphase &rarr; Anaphase &rarr; Telophase</label>
+                <label class="option-label"><input type="radio" name="q14" value="C" required> C) Metaphase &rarr; Prophase &rarr; Telophase &rarr; Anaphase</label>
+                <label class="option-label"><input type="radio" name="q14" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> The sequential order of nuclear division phases in mitosis is Prophase, Metaphase, Anaphase, and Telophase (mnemonic: <strong>PMAT</strong>).
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question-card" data-answer="B">
+            <div class="question-header">
+                <span class="question-title">15. Where does active mitosis primarily occur in plants for growth? <span class="required-asterisk">*</span></span>
+                <span class="marks">1 Mark</span>
+            </div>
+            <div class="options-group">
+                <label class="option-label"><input type="radio" name="q15" value="A" required> A) Epidermal leaf cells</label>
+                <label class="option-label"><input type="radio" name="q15" value="B" required> B) Meristematic tissues at root and shoot tips</label>
+                <label class="option-label"><input type="radio" name="q15" value="C" required> C) Xylem vessels</label>
+                <label class="option-label"><input type="radio" name="q15" value="D" required> D) idky</label>
+            </div>
+            <div class="explanation-box">
+                <div class="explanation-title">Answer Key &amp; Explanation:</div>
+                <strong>Correct Answer: B.</strong> In plants, mitosis is localized in regions of active growth known as meristems (found in root tips and shoot tips).
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('mitosisQuiz').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        let score = 0;
+        const totalQuestions = 15;
+        const cards = document.querySelectorAll('.question-card');
+
+        cards.forEach((card, index) => {
+            const correctAnswer = card.getAttribute('data-answer');
+            const selectedOption = card.querySelector(`input[name="q${index + 1}"]:checked`);
+            const options = card.querySelectorAll('.option-label');
+            const explanation = card.querySelector('.explanation-box');
+
+            // Reset state
+            options.forEach(opt => opt.classList.remove('correct', 'incorrect'));
+
+            // Check selected option
+            if (selectedOption) {
+                if (selectedOption.value === correctAnswer) {
+                    score++;
+                    selectedOption.parentElement.classList.add('correct');
+                } else {
+                    selectedOption.parentElement.classList.add('incorrect');
+                    // Highlight the actual correct option as well
+                    options.forEach(opt => {
+                        const input = opt.querySelector('input');
+                        if (input && input.value === correctAnswer) {
+                            opt.classList.add('correct');
+                        }
+                    });
+                }
+            }
+
+            // Reveal explanation
+            if (explanation) {
+                explanation.style.display = 'block';
+            }
+        });
+
+        // Display Score Summary
+        const scoreBox = document.getElementById('scoreBox');
+        scoreBox.style.display = 'block';
+        scoreBox.innerHTML = `Quiz Completed! Your Score: <strong>${score} / ${totalQuestions}</strong> (${Math.round((score/totalQuestions)*100)}%)`;
+        
+        // Smooth scroll to top to see score
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
